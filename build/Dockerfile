@@ -1,4 +1,4 @@
-FROM maven:3.2-onbuild
+FROM maven:3.8.1-jdk-11
 
 # Building a java-war application
 WORKDIR /tmp
