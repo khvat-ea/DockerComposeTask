@@ -6,7 +6,7 @@ services:
             context: .
             dockerfile: ./build/Dockerfile
         volumes:
-            - type: volumes
+            - type: volume
               source: artifacts
               target: /tmp/boxfuse-sample-java-war-hello/target
 
@@ -15,7 +15,7 @@ services:
         ports:
             - "8088:8080"
         volumes: 
-            - type: volumes
+            - type: volume
               source: artifacts
               target: /usr/local/tomcat/webapps
               volume:
