@@ -2,6 +2,29 @@
 version: "3.8"
 services:
     build_les7:
-        image: "maven:3.2-onbuild"
+        build:
+            context: .
+            dockerfile: ./build/dockerfile
+        volumes:
+            - type: volumes
+              source: artifacts
+              target: /tmp/boxfuse-sample-java-war-hello/target
+
+    prod_les7:
+        image: tomcat:9.0
+        ports:
+            - "8088:8080"
+        volumes: 
+            - type: volumes
+            source: artifacts
+            target: /usr/local/tomcat/webapps
+            volume:
+                nocopy: true
+
+
+volumes: 
+    artifacts:
+
+
         
 
