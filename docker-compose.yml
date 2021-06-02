@@ -4,7 +4,7 @@ services:
     build_les7:
         build:
             context: .
-            dockerfile: ./build/dockerfile
+            dockerfile: ./build/Dockerfile
         volumes:
             - type: volumes
               source: artifacts
