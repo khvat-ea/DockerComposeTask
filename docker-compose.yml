@@ -11,7 +11,9 @@ services:
               target: /tmp/boxfuse-sample-java-war-hello/target
 
     prod_les7:
-        image: tomcat:9.0
+        build:
+            context: .
+            dockerfile: ./prod/Dockerfile
         ports:
             - "8088:8080"
         volumes: 
