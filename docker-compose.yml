@@ -19,7 +19,7 @@ services:
         volumes: 
             - type: volume
               source: artifacts
-              target: /usr/local/tomcat/webapps
+              target: /opt/tomcat/webapps
               volume:
                   nocopy: true
 
