@@ -3,7 +3,7 @@ FROM alpine:3.7
 
 # Preparing the environment for deployment
 RUN apk update \
-    && apk install build-essential wget default-jdk \
+    && apk add build-essential wget default-jdk \
     && wget http://apache.rediris.es/tomcat/tomcat-9/v9.0.46/bin/apache-tomcat-9.0.46.tar.gz -O /tmp/tomcat9.tar.gz \
     && tar -C "/opt" -xvf /tmp/tomcat9.tar.gz 
 
